@@ -1,30 +1,26 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+
 
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
-import { ServersComponent } from './servers/servers.component';
-import { WarningAlertComponent } from './warning-alert/warning-alert.component';
-import { SuccessAlertComponent } from './success-alert/success-alert.component';
-import { UsernameInputComponent } from './username-input/username-input.component';
-import { DisplayDetailsComponent } from './display-details/display-details.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
+import { LoggingService, AccountsService } from './services';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
-    ServersComponent,
-    WarningAlertComponent,
-    SuccessAlertComponent,
-    UsernameInputComponent,
-    DisplayDetailsComponent
+    CockpitComponent,
+    ServerElementComponent,
+    BasicHighlightDirective
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [LoggingService, AccountsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

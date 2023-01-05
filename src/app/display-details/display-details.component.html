@@ -1,8 +1,0 @@
-<button class="btn btn-danger"
-        (click)="displayDetailsClick()"> Display Details</button>
-<p [hidden]="paragraphToggle">This is some text in the paragraph</p>
-<ul>
-  <li *ngFor="let c of clicks; let i = index"
-      [ngStyle]="{backgroundColor:getClickListBackground(i)}"
-      [ngClass]="{'white-text':i>=4}">{{c}}</li>
-</ul>
